@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+    grid-template-columns: 1fr clamp(327px, 90%, 540px) 1fr;
+    background-image: url(./bg-pattern.svg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: 100% 55%;
+}
+
+.header {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.header-text {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.header-img {
+    grid-row: 1 /2;
+    grid-column: 1 /2;
+}
+
+.header h1 {
+    justify-content: right;
+    padding: 0 0 1rem 0;
+
+}
+
+.text-muted {
+    color: #848EAD;
+}
+
+.text-10px {
+    font-size: 10px;
+}
+
+.text-12px {
+    font-size: 12px;
+}
+
+.text-14px {
+    font-size: 14px;
+}
+
+.text-15px {
+    font-size: 15px;
+}
+
+.text-16px {
+    font-size: 16px;
+}
+
+.text-20px {
+    font-size: 20px;
+}
+
+.text-28px {
+    font-size: 28px;
+}
+
+.text-40px {
+    font-size: 40px;
+}
+
+.color-navy {
+    color: #293356;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.card {
+    background-color: #ffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 4px #00000034;
+    z-index: 2;
+    grid-column: 2 / 3;
+    grid-row: 3 / 6;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0 2rem;
+    flex-wrap: wrap;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    order: 2;
+}
+
+.pageviews {
+    order: 1;
+    letter-spacing: 1.71px;
+}
+
+.card-body {
+    padding: 0 2rem 2rem 2rem;
+}
+
+
+.billingDiscount {
+    background-color: #FEEDE8;
+    color: #FF8D68;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.1rem 0.5rem;
+
+}
+
+.billingDiscountMobile {
+    display: none;
+}
+
+.infoBilling {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 2rem 0 2rem;
+    white-space: nowrap;
+}
+
+.infoBilling .item1 {
+    margin-left: 6rem;
+}
+
+.infoBilling .item2 {
+    margin: 0 1.5rem 0 1rem;
+}
+
+.infoBilling .item3 {
+    margin: 0.3rem;
+}
+
+.infoBilling .item4 {
+    margin: 0.3rem;
+}
+
+/* isDiscount slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    min-width: 40px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CFD8EF;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #7AEADF;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #7AEADF;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1.5rem 2rem 1rem 2rem;
+}
+
+.checkedInfo {
+    background-image: url(./icon-check.svg);
+    background-repeat: no-repeat;
+    height: 10px;
+    padding-right: 0.5rem;
+}
+
+.checks {
+    display: flex;
+    flex: 0 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.submit-container {
+    display: flex;
+    flex: 0 0 auto;
+    width: 50%;
+    justify-content: end;
+}
+
+.form-submit-input {
+    width: 170px;
+    height: 41px;
+}
+
+.card-footer input {
+    background-color: #293356;
+    color: #BECDFF;
+    border-radius: 2rem;
+    padding: 0.7rem 0.5rem;
+    border: 0;
+}
+
+.card-footer input:hover {
+    color: #ffffff;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    width: 100%;
+    margin: 1rem 0 0 0;
+}
+
+.card-footer-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+input[type=range].styled-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    order: 3;
+    margin: 2rem 0 0 0;
+}
+
+input[type=range].styled-slider.slider-progress {
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--value) - var(--min)) / var(--range));
+    --sx: calc(0.5 * 40px + var(--ratio) * (100% - 40px));
+}
+
+input[type=range].styled-slider:focus {
+    outline: none;
+}
+
+input[type=range].styled-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #10D8C4;
+    border: none;
+    box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
+    margin-top: calc(8px * 0.5 - 40px * 0.5);
+    background-image: url(./icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type=range].styled-slider::-webkit-slider-runnable-track {
+    height: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #ECF0FB;
+    box-shadow: none;
+}
+
+input[type=range].styled-slider::-webkit-slider-thumb:hover {
+    background: #7AEADF;
+    background-image: url(./icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type=range].styled-slider::-webkit-slider-thumb:active {
+    background: #24AEA1;
+    background-image: url(./icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
+    background: linear-gradient(#A4F3EB, #A4F3EB) 0/var(--sx) 100% no-repeat, #ECF0FB;
+}
+
+input[type=range].styled-slider::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #10D8C4;
+    border: none;
+    box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
+    background-image: url(./icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type=range].styled-slider::-moz-range-track {
+    height: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #ECF0FB;
+    box-shadow: none;
+}
+
+input[type=range].styled-slider::-moz-range-thumb:hover {
+    background: #7AEADF;
+    background-image: url(./icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type=range].styled-slider::-moz-range-thumb:active {
+    background: #24AEA1;
+    background-image: url(./icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type=range].styled-slider.slider-progress::-moz-range-track {
+    background: linear-gradient(#A4F3EB, #A4F3EB) 0/var(--sx) 100% no-repeat, #ECF0FB;
+}
+
+input[type=range].styled-slider::-ms-fill-upper {
+    background: transparent;
+    border-color: transparent;
+}
+
+input[type=range].styled-slider::-ms-fill-lower {
+    background: transparent;
+    border-color: transparent;
+}
+
+input[type=range].styled-slider::-ms-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #10D8C4;
+    border: none;
+    box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+input[type=range].styled-slider::-ms-track {
+    height: 8px;
+    border-radius: 8px;
+    background: #ECF0FB;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+input[type=range].styled-slider::-ms-thumb:hover {
+    background: #7AEADF;
+}
+
+input[type=range].styled-slider::-ms-thumb:active {
+    background: #24AEA1;
+}
+
+input[type=range].styled-slider.slider-progress::-ms-fill-lower {
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+    margin: -undefined 0 -undefined -undefined;
+    background: #A4F3EB;
+    border: none;
+    border-right-width: 0;
+}
+
+/* mobile users */
+@media only screen and (max-width: 490px) {
+    .billingDiscountMobile {
+        display: block;
+        background-color: #FEEDE8;
+        color: #FF8D68;
+        text-align: center;
+        border-radius: 1rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .billingDiscount {
+        display: none;
+    }
+
+    .header-text h1 {
+        font-size: 20px;
+        padding-bottom: 0.5rem;
+    }
+
+    .header-text h3 {
+        font-size: 13px;
+        text-align: center;
+        width: 55%;
+        line-height: 1.6;
+    }
+
+    .card-header {
+        justify-content: center !important;
+    }
+
+    .infoBilling {
+        margin: 2rem 1rem 2.5rem 2rem;
+    }
+
+    .infoBilling .item1 {
+        padding-left: 1rem;
+    }
+
+    .infoBilling .item1,
+    .infoBilling .item3 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .infoBilling .item2 {
+        margin: 0 1rem 0 1rem;
+        padding: 0;
+    }
+
+    .infoBilling .item4 {
+        margin: 0;
+    }
+
+    input[type=range].styled-slider {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 2rem 0;
+        order: 2;
+    }
+
+    .card-body {
+        padding: 0;
+    }
+
+    .card-footer {
+        margin: 0;
+        padding: 0.8rem 0 1rem 0;
+    }
+
+    .price {
+        font-size: 32px;
+        order: 3;
+        padding-top: 0.5rem;
+    }
+
+    .card-header span {
+        font-size: 14px;
+    }
+
+    .pageviews {
+        font-size: 12px;
+        order: 1;
+    }
+
+    .checks {
+        display: flex;
+        flex: 0 0 auto;
+        width: 100%;
+        align-items: center;
+    }
+
+    .submit-container {
+        display: flex;
+        flex: 0 0 auto;
+        width: 100%;
+        justify-content: center;
+        margin: 1rem 0 0 0;
+    }
+
+    .header {
+        margin-top: 2rem;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .card {
+        margin-top: 4.5rem;
+        grid-column: 2 / 3;
+        grid-row: 2 / 6;
+    }
+
+    .main {
+        background-size: 100% 40%;
+    }
+}
+
+@media only screen and (min-width: 1441px) {
+    .card-header {
+        padding: 3rem 2rem 0 2rem;
+    }
+
+    .card-body {
+        padding: 0 2rem 1.5rem 2rem
+    }
+
+    .card-footer {
+        padding: 2rem;
+    }
+
+    input[type=range].styled-slider {
+        margin: 3rem 0 1rem 0;
+
+    }
+}
